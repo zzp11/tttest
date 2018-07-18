@@ -28,11 +28,10 @@ int main(int argc, char *argv[]){
         printf("open file: %s failed!\n", srcFileName);
         return -1;
     }
-
     
     destFile = open(destFileName, WRITEFLASG, WRITEMODE);
     if(srcFile == -1){
-        printf("open file: %s failed!\n", srcFileName);
+        printf("create file: %s failed!\n", srcFileName);
         close(srcFile);
         return -1;
     }
